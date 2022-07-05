@@ -5,13 +5,21 @@
     padding: 0px;
 }
 body{
+    gap: 50px;
+    height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+}
+body, .calculator-area-2{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
-    height: 100vh;
-    background-color: hsl(185, 41%, 84%);
+} 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 #splitter-logo {
@@ -29,7 +37,11 @@ body{
     background-color: hsl(0, 0%, 100%);
 }
 
+
+
+
 .calculator-area-1{
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,31 +50,28 @@ body{
     height: 350px;
     background-color:hsl(0, 0, 100%);
 }
-.calculator-area-2{
-    width: 350px;
-    height: 350px;
-    border-radius: 10px;
-    background-color:hsl(183, 100%, 15%);
-}
-
 label, h1 {
     font-size: 15px;
     color: hsl(186, 14%, 43%);
 }
-.bill-price{
+.bill-price, #tip-options{
     display: flex;
     flex-direction: column;
 }
 .bill-input{
+    color: hsl(183, 100%, 15%);
     width: 350px;
     height: 40px;
+    font-size: 24px;
+    text-align: right;
     border: none;
     background-color: hsl(189, 41%, 97%);
 }
+.bill-input::placeholder{
+    margin-right: 10px;
+}
 
 #tip-options{
-    display: flex;
-    flex-direction: column;
     gap: 15px;
 }
 .tip-options-1, .tip-options-2 {
@@ -70,16 +79,79 @@ label, h1 {
     justify-content: space-between;
 }
 .custom-tip{
+    cursor: pointer;
     width: 105px;
     height: 40px;
     border: none;
     background-color: hsl(189, 41%, 97%);
 }
+.custom-tip::placeholder{
+    font-size: 18px;
+    text-align: center;
+}
+
 .tip-btn{
-    color: white;
+    color: hsl(189, 41%, 97%);
     width: 105px;
     height: 40px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     background-color: hsl(183, 100%, 15%);
+}
+.tip-btn:hover{
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 68%, 82%);
+}
+
+
+
+
+.calculator-area-2{
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    background-color:hsl(183, 100%, 15%);
+}
+.result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tip-desc-1, .tip-desc-2{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.tip-desc-1{
+    margin-right: 90px;
+}
+.tip-desc-2{
+    margin-right: 110px;
+}
+.calculator-area-2-title{
+    font-size: 12px;
+    color: hsl(189, 41%, 97%);
+}
+.calculator-area-2-subtitle{
+    font-size: 10px;
+    color: hsl(184, 14%, 56%);
+}
+.tip-amount{
+    font-size: 40px;
+    color: hsl(172, 67%, 45%);
+}
+.reset-btn{
+    margin-top: 120px;
+    width: 300px;
+    height: 40px;
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(172, 67%, 45%);
+}
+.reset-btn:hover{
+    cursor: pointer;
+    background-color: hsl(185, 68%, 82%);
 }
